@@ -1,90 +1,163 @@
-# MetaPayX – Web3 Payments with MetaMask Smart Accounts + Monad
 
-MetaPayX is a hackathon project for the **MetaMask Smart Accounts x Monad Dev Cook-Off**.  
-It enables **gasless, user-friendly payments** using MetaMask Smart Accounts on the Monad blockchain.  
 
-📂 Repo Structure 
+# 🛡️ MetaPayX
 
+**Seamless Web3 Payments with MetaMask Smart Accounts + Monad**
+
+MetaPayX is a developer blueprint for **next-gen decentralized payments**.
+Built for the **MetaMask Smart Accounts x Monad Dev Cook-Off**, it integrates **ERC-4337 Smart Accounts** with the **high-performance Monad blockchain** to deliver a smooth, **Web2-like checkout experience** in Web3.
+
+---
+
+## ✨ Features
+
+* 🔑 **Smart Accounts (ERC-4337):** recovery, social login, and abstraction.
+* ⛽ **Gas Abstraction:** pay fees in any token or sponsor them entirely.
+* 📦 **Batched Transactions:** approval + swap + payment in one step.
+* ⚡ **Monad Speed:** high throughput, low latency blockchain.
+* 🛒 **Developer SDK:** easy plug-in for dApps & merchants.
+
+---
+
+## ⚙️ Tech Stack
+
+* **Frontend:** Next.js 13, TypeScript, Wagmi, MetaMask SDK
+* **Backend:** Node.js, Express
+* **Smart Contracts:** Solidity (Hardhat)
+* **Blockchain:** Monad Testnet
+* **Env:** dotenv for configuration
+
+---
+
+## 📂 Project Structure
+
+```bash
 metapayx/
 │── README.md
 │── contracts/
-│   └── Paymaster.sol
-│   └── hardhat.config.js
+│   ├── Paymaster.sol          # Solidity Paymaster contract
+│   └── hardhat.config.js      # Hardhat config for Monad
 │── backend/
-│   ├── server.js
+│   ├── server.js              # Express server for sponsored txns
 │   ├── package.json
-│   └── .env.example
+│   └── .env.example           # Backend env variables template
 │── frontend/
 │   ├── app/
-│   │   ├── page.tsx
-│   │   └── layout.tsx
+│   │   ├── page.tsx           # Next.js main landing page
+│   │   └── layout.tsx         # Next.js layout
 │   ├── package.json
-│   └── .env.local.example
+│   └── .env.local.example     # Frontend env variables template
+```
 
 ---
 
-## 🚀 Features
-- 🔑 Smart Accounts with recovery & social login
-- ⛽ Gasless transactions via Paymaster
-- 🛒 Stablecoin payments
-- 📦 One-click checkout for dApps and e-commerce
+## 🔧 Setup & Installation
 
----
+### 1️⃣ Clone the repo
 
-## 🏗️ Architecture
-- **Frontend:** Next.js + Wagmi + MetaMask SDK
-- **Backend:** Node.js + Express
-- **Smart Contracts:** Solidity (deployed on Monad testnet)
-- **Blockchain:** Monad
-
----
-
-## ⚙️ Setup Instructions
-
-### Prerequisites
-- Node.js (>=18)
-- Yarn or npm
-- MetaMask wallet with Smart Accounts enabled
-- Monad testnet RPC
-
-### Clone the repo
 ```bash
 git clone https://github.com/your-username/metapayx.git
-cd metapayx 
+cd metapayx
+```
 
-Install dependencies
+### 2️⃣ Install dependencies
 
-yarn install
-# or
-npm install
+Frontend:
 
-Environment variables
+```bash
+cd frontend && npm install
+```
 
-Create a .env file in root:
+Backend:
 
-NEXT_PUBLIC_MONAD_RPC=https://testnet-rpc.monad.xyz
-PAYMASTER_CONTRACT=0xYourContractAddress 
+```bash
+cd backend && npm install
+```
 
-Run frontend 
+Contracts:
 
-cd frontend
-yarn dev
+```bash
+cd contracts && npm install
+```
 
+### 3️⃣ Configure Environment
 
-Run backend
+Copy `.env.example` files and set your **Monad RPC URL** + contract addresses.
 
+Backend (`backend/.env`):
+
+```env
+MONAD_RPC=https://monad-testnet.provider.io/v2/your-api-key
+PAYMASTER_CONTRACT=0xYourPaymasterContract
+```
+
+Frontend (`frontend/.env.local`):
+
+```env
+NEXT_PUBLIC_MONAD_RPC=https://monad-testnet.provider.io/v2/your-api-key
+```
+
+---
+
+## 🚀 Running the Project
+
+### Start backend server (gas sponsor / relayer)
+
+```bash
 cd backend
-yarn dev
+npm run dev
+```
 
-📚 Resources
-MetaMask Smart Accounts Docs
-Monad Docs 
+### Start frontend (Next.js app)
 
-🏆 Hackathon Info
-Built for MetaMask x Monad Dev Cook-Off (Sep 19 – Oct 20).
-Goal: build seamless, next-gen Web3 experiences with smart accounts.
+```bash
+cd frontend
+npm run dev
+```
 
+Visit: **[http://localhost:3000](http://localhost:3000)** 🎉
 
+---
 
+## 📝 Usage Example
 
+* Connect wallet via **MetaMask Smart Accounts**.
+* Mint a test NFT on Monad testnet.
+* Pay gas fees in stablecoin OR have them sponsored.
+* Approve + swap + purchase all in a **single transaction**.
 
+---
+
+## 📚 Resources
+
+* [MetaMask Smart Accounts Docs](https://support.metamask.io/configure/accounts/what-is-a-smart-account/)
+* [Monad Documentation](https://docs.monad.xyz)
+* [Hackathon Page](https://www.hackquest.io/hackathons/MetaMask-Smart-Accounts-x-Monad-Dev-Cook-Off)
+
+---
+
+## 🏆 Hackathon
+
+Built for the **MetaMask Smart Accounts x Monad Dev Cook-Off**
+🗓️ Sep 19 – Oct 20
+👥 Team / Solo participation
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome! Open an issue to suggest new features or fixes.
+
+---
+
+## 📜 License
+
+MIT License © 2025 MetaPayX
+
+---
+
+🔥 With **MetaPayX**, developers can build **consumer-ready Web3 payment apps** that feel as smooth as Web2.
+
+Made with 💜 by 0xe.eph for monad.
+
+---
