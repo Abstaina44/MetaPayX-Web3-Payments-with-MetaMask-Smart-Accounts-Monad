@@ -1,0 +1,20 @@
+{
+  "name": "metapayx-web3-payments-with-metamask-smart-accounts-monad",
+  "version": "1.0.0",
+  "description": "**Seamless Web3 Payments with MetaMask Smart Accounts + Monad**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "dotenv": "^17.2.3",
+    "hardhat": "^2.26.0"
+  },
+  "dependencies": {
+    "@account-abstraction/contracts": "^0.8.0"
+  }
+}
