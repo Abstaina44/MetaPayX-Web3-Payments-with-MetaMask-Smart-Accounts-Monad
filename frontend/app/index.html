@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MetaPayX</title>
+  <style>
+    body {
+      background-color: #1a1a1a;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-top: 2rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    button {
+      background-color: #0088ff;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin: 10px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #0055aa;
+    }
+
+    .container {
+      margin-top: 5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Welcome to MetaPayX</h1>
+    <p>
+      A Web3 payments layer built with MetaMask Smart Accounts.<br />
+      Making Web3 payments feel as smooth as Web2.<br /><br />
+      With MetaPayX, you can pay without worrying about gas.
+    </p>
+    <button id="connectButton">Connect MetaMask</button>
+    <button id="sendButton" style="display: none">Send 0.001 MON</button>
+  </div>
+  <!-- Load libraries BEFORE your main script -->
+  <script src="https://cdn.jsdelivr.net/npm/@metamask/sdk/dist/metamask-sdk.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.10.0/dist/ethers.umd.min.js"></script>
+  <!-- Then your app script -->
+  <script src="./main.js"></script>
+</body>
+
+</html>
+
+
